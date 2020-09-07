@@ -18,7 +18,7 @@ export default class  ClassesController {
         const time = filters.time as string;
 
         if (!filters.week_day || !filters.subject || !filters.time) {
-            return response.status(400).json( "error")
+            return res.status(400).json( "error")
         }
 
         const timeInMinutes = converHourToMinutes(time);
